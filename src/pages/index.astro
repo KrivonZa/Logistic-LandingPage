@@ -1,0 +1,456 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="LogiFlow - Optimizing Logistics">
+  <main>
+    <!-- Hero Section -->
+    <section
+      class="pt-24 pb-12 md:pt-32 md:pb-24 bg-gradient-to-r from-blue-600 to-blue-800"
+    >
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 text-white" data-aos="fade-right">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+              Smart Logistics Solutions for Your Business
+            </h1>
+            <p class="text-xl mb-8">
+              Optimize your supply chain with our advanced logistics and
+              transportation services
+            </p>
+            <div class="space-x-4">
+              <a
+                href="/contact"
+                class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition"
+                >Get Started</a
+              >
+              <a
+                href="/services"
+                class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition"
+                >Learn More</a
+              >
+            </div>
+          </div>
+          <div class="md:w-1/2 mt-8 md:mt-0" data-aos="fade-left">
+            <img
+              src="https://images.unsplash.com/photo-1592838064575-70ed626d3a0e?q=80&w=2018&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="Logistics"
+              class="rounded-lg shadow-xl"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-4">
+          Why Choose LogiFlow?
+        </h2>
+        <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+          Experience the difference with our innovative logistics solutions
+          designed to streamline your supply chain and boost your business
+          efficiency.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up">
+            <div class="text-primary text-3xl mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 w-12"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Fast Delivery</h3>
+            <p class="text-gray-600">
+              Express shipping solutions with guaranteed delivery times across
+              global routes.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-lg shadow-md"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="text-primary text-3xl mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 w-12"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Secure Transport</h3>
+            <p class="text-gray-600">
+              Advanced security measures and real-time monitoring for your
+              valuable cargo.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-lg shadow-md"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="text-primary text-3xl mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 w-12"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Cost Effective</h3>
+            <p class="text-gray-600">
+              Competitive pricing and optimized routes to maximize your ROI.
+            </p>
+          </div>
+
+          <div
+            class="bg-white p-6 rounded-lg shadow-md"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="text-primary text-3xl mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 w-12"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-2">Easy Tracking</h3>
+            <p class="text-gray-600">
+              Real-time shipment tracking and status updates at your fingertips.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-4">
+          Our Comprehensive Services
+        </h2>
+        <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+          From air freight to specialized logistics solutions, we offer a
+          complete range of services to meet your transportation needs.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="p-6 bg-gray-50 rounded-lg"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="text-primary text-4xl mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 w-12"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Air Freight</h3>
+            <p class="text-gray-600 mb-4">
+              Fast and reliable air freight services for time-sensitive
+              deliveries worldwide.
+            </p>
+            <ul class="text-gray-600 space-y-2">
+              <li>• Express Air Freight</li>
+              <li>• Charter Services</li>
+              <li>• Door-to-Door Delivery</li>
+              <li>• Temperature Controlled</li>
+            </ul>
+          </div>
+
+          <div
+            class="p-6 bg-gray-50 rounded-lg"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="text-primary text-4xl mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 w-12"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"
+                ></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Ocean Freight</h3>
+            <p class="text-gray-600 mb-4">
+              Cost-effective ocean freight solutions for large-scale
+              international shipping.
+            </p>
+            <ul class="text-gray-600 space-y-2">
+              <li>• FCL Shipping</li>
+              <li>• LCL Shipping</li>
+              <li>• Port-to-Port Service</li>
+              <li>• Custom Clearance</li>
+            </ul>
+          </div>
+
+          <div
+            class="p-6 bg-gray-50 rounded-lg"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <div class="text-primary text-4xl mb-4">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-12 w-12"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+              </svg>
+            </div>
+            <h3 class="text-xl font-semibold mb-4">Road Transport</h3>
+            <p class="text-gray-600 mb-4">
+              Efficient road transportation services with real-time tracking and
+              monitoring.
+            </p>
+            <ul class="text-gray-600 space-y-2">
+              <li>• FTL Services</li>
+              <li>• LTL Services</li>
+              <li>• Express Delivery</li>
+              <li>• Last Mile Delivery</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-gray-900 text-white">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+          <div data-aos="fade-up">
+            <div class="text-4xl font-bold mb-2">1000+</div>
+            <div class="text-gray-400">Clients Worldwide</div>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="100">
+            <div class="text-4xl font-bold mb-2">50+</div>
+            <div class="text-gray-400">Countries Served</div>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="200">
+            <div class="text-4xl font-bold mb-2">99%</div>
+            <div class="text-gray-400">On-Time Delivery</div>
+          </div>
+          <div data-aos="fade-up" data-aos-delay="300">
+            <div class="text-4xl font-bold mb-2">24/7</div>
+            <div class="text-gray-400">Customer Support</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-4">
+          What Our Clients Say
+        </h2>
+        <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+          Hear from businesses that have transformed their logistics operations
+          with LogiFlow.
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-gray-50 p-6 rounded-lg shadow-md" data-aos="fade-up">
+            <div class="flex items-center mb-4">
+              <img
+                src="https://randomuser.me/api/portraits/men/1.jpg"
+                alt="Client"
+                class="w-12 h-12 rounded-full"
+              />
+              <div class="ml-4">
+                <h4 class="font-semibold">John Smith</h4>
+                <p class="text-gray-600">CEO, Tech Solutions Inc.</p>
+              </div>
+            </div>
+            <p class="text-gray-600">
+              "LogiFlow has revolutionized our supply chain management. Their
+              efficient services and real-time tracking have significantly
+              improved our delivery times."
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-50 p-6 rounded-lg shadow-md"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <div class="flex items-center mb-4">
+              <img
+                src="https://randomuser.me/api/portraits/women/1.jpg"
+                alt="Client"
+                class="w-12 h-12 rounded-full"
+              />
+              <div class="ml-4">
+                <h4 class="font-semibold">Sarah Johnson</h4>
+                <p class="text-gray-600">
+                  Operations Manager, Global Trade Ltd.
+                </p>
+              </div>
+            </div>
+            <p class="text-gray-600">
+              "The level of professionalism and attention to detail from
+              LogiFlow is outstanding. They've helped us expand our
+              international presence."
+            </p>
+          </div>
+
+          <div
+            class="bg-gray-50 p-6 rounded-lg shadow-md"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div class="flex items-center mb-4">
+              <img
+                src="https://randomuser.me/api/portraits/men/2.jpg"
+                alt="Client"
+                class="w-12 h-12 rounded-full"
+              />
+              <div class="ml-4">
+                <h4 class="font-semibold">Michael Chen</h4>
+                <p class="text-gray-600">Logistics Director, Retail Corp</p>
+              </div>
+            </div>
+            <p class="text-gray-600">
+              "We've seen a 40% reduction in shipping costs since partnering
+              with LogiFlow. Their optimization solutions are game-changing."
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-blue-600 to-blue-800">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold text-white mb-4">
+          Ready to Optimize Your Logistics?
+        </h2>
+        <p class="text-xl text-white mb-8">
+          Join thousands of businesses that trust LogiFlow for their logistics
+          needs
+        </p>
+        <div class="space-x-4">
+          <a
+            href="/contact"
+            class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition inline-block"
+            >Get Started Now</a
+          >
+          <a
+            href="/services"
+            class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition inline-block"
+            >Learn More</a
+          >
+        </div>
+      </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-4">
+          Our Trusted Partners
+        </h2>
+        <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+          We collaborate with leading companies worldwide to provide the best
+          logistics solutions.
+        </p>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+          <div class="p-4" data-aos="fade-up">
+            <img
+              src="https://placehold.co/200x80?text=Partner+1"
+              alt="Partner"
+              class="mx-auto"
+            />
+          </div>
+          <div class="p-4" data-aos="fade-up" data-aos-delay="100">
+            <img
+              src="https://placehold.co/200x80?text=Partner+2"
+              alt="Partner"
+              class="mx-auto"
+            />
+          </div>
+          <div class="p-4" data-aos="fade-up" data-aos-delay="200">
+            <img
+              src="https://placehold.co/200x80?text=Partner+3"
+              alt="Partner"
+              class="mx-auto"
+            />
+          </div>
+          <div class="p-4" data-aos="fade-up" data-aos-delay="300">
+            <img
+              src="https://placehold.co/200x80?text=Partner+4"
+              alt="Partner"
+              class="mx-auto"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
