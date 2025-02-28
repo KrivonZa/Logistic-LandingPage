@@ -109,6 +109,8 @@ import Layout from "../layouts/Layout.astro";
         const templateId = import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID;
         const publicKey = import.meta.env.PUBLIC_EMAILJS_ID;
 
+        console.log(serviceId, templateId, publicKey)
+
         const formData = {
           name: (contactForm.elements.namedItem("name") as HTMLInputElement)
             .value,
