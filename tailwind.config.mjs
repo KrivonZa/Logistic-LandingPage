@@ -11,3 +11,5 @@ export default {
   },
   plugins: []
 }
+
+//màu chính: #4348BD
