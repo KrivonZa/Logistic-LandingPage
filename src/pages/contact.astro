@@ -97,9 +97,7 @@ import Layout from "../layouts/Layout.astro";
   <script>
     import emailjs from "@emailjs/browser";
 
-    const contactForm = document.getElementById(
-      "contact-form"
-    ) as HTMLFormElement;
+    const contactForm = document.getElementById("contact-form") as HTMLFormElement;
 
     if (contactForm) {
       contactForm.addEventListener("submit", (e) => {
@@ -107,36 +105,45 @@ import Layout from "../layouts/Layout.astro";
 
         const serviceId = import.meta.env.PUBLIC_EMAILJS_SERVICE_ID;
         const templateId = import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID;
+        const autoReplyTemplateId = import.meta.env.PUBLIC_EMAILJS_AUTO_REPLY_TEMPLATE_ID;
         const publicKey = import.meta.env.PUBLIC_EMAILJS_ID;
 
         const formData = {
-          name: (contactForm.elements.namedItem("name") as HTMLInputElement)
-            .value,
-          email: (contactForm.elements.namedItem("email") as HTMLInputElement)
-            .value,
-          message: (
-            contactForm.elements.namedItem("message") as HTMLTextAreaElement
-          ).value,
-          reply_to: (
-            contactForm.elements.namedItem("email") as HTMLTextAreaElement
-          ).value,
+          name: (contactForm.elements.namedItem("name") as HTMLInputElement).value,
+          email: (contactForm.elements.namedItem("email") as HTMLInputElement).value,
+          message: (contactForm.elements.namedItem("message") as HTMLTextAreaElement).value,
+          reply_to: (contactForm.elements.namedItem("email") as HTMLInputElement).value,
         };
 
-        emailjs
-          .send(serviceId, templateId, formData, publicKey)
-          .then((response) => {
-            console.log(
-              "Gửi email thành công!",
-              response.status,
-              response.text
-            );
+        // Gửi email thông báo đến FlipShip
+        emailjs.send(serviceId, templateId, formData, publicKey).then(
+          (response) => {
+            console.log("Gửi email đến FlipShip thành công!", response.status, response.text);
+          },
+          (error) => {
+            console.error("Lỗi khi gửi email đến FlipShip:", error);
+          }
+        );
+
+        // Gửi email auto-reply đến người dùng
+        const autoReplyData = {
+          name: formData.name,
+          email: formData.email, // Để hiển thị trong template nếu cần
+          message: formData.message,
+          to_email: formData.email, // Địa chỉ nhận email auto-reply
+          reply_to: "kevintruong6587@gmail.com", // Khi người dùng reply, gửi về FlipShip
+        };
+        emailjs.send(serviceId, autoReplyTemplateId, autoReplyData, publicKey).then(
+          (response) => {
+            console.log("Gửi auto-reply thành công!", response.status, response.text);
             alert("Cảm ơn bạn đã liên hệ. Chúng tôi sẽ phản hồi sớm!");
             contactForm.reset();
-          })
-          .catch((error) => {
-            console.error("Lỗi khi gửi email:", error);
+          },
+          (error) => {
+            console.error("Lỗi khi gửi auto-reply:", error);
             alert("Có lỗi xảy ra khi gửi tin nhắn. Vui lòng thử lại sau!");
-          });
+          }
+        );
       });
     } else {
       console.error("Không tìm thấy phần tử có id 'contact-form'.");
