@@ -6,7 +6,7 @@ import Layout from "../layouts/Layout.astro";
   <main>
     <!-- Hero Section -->
     <section
-      class="pt-24 pb-12 md:pt-32 md:pb-24 bg-gradient-to-r from-blue-600 to-blue-800"
+      class="pt-24 pb-12 md:pt-32 md:pb-24 bg-gradient-to-r from-primary to-secondary"
     >
       <div class="container mx-auto px-4">
         <div class="flex flex-col md:flex-row items-center">
@@ -15,25 +15,26 @@ import Layout from "../layouts/Layout.astro";
               Giải Pháp Tối Ưu Hóa Chở Hàng Bằng Xe Khách Cùng FlipShip
             </h1>
             <p class="text-xl mb-8">
-              Nâng cao hiệu quả vận chuyển hàng hóa của bạn với dịch vụ chở hàng
-              bằng xe khách tiên tiến từ FlipShip
+              Nâng cao hiệu quả vận chuyển hàng hóa với dịch vụ tiên tiến từ
+              FlipShip. Tận dụng không gian xe khách để giao hàng nhanh chóng,
+              tiết kiệm và an toàn.
             </p>
             <div class="space-x-4">
               <a
                 href="/contact"
-                class="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition"
+                class="bg-secondary text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 hover:text-secondary transition"
                 >Bắt Đầu</a
               >
               <a
                 href="/services"
-                class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition"
+                class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition"
                 >Tìm Hiểu Thêm</a
               >
             </div>
           </div>
           <div class="md:w-1/2 mt-8 md:mt-0" data-aos="fade-left">
             <img
-              src="https://plus.unsplash.com/premium_photo-1661963542752-9a8a1d72fb28?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="https://plus.unsplash.com/premium_photo-1661963542752-9a8a1d72fb28?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3"
               alt="Xe khách chở hàng"
               class="rounded-lg shadow-xl"
             />
@@ -45,18 +46,17 @@ import Layout from "../layouts/Layout.astro";
     <!-- Why Choose Us Section -->
     <section class="py-16 bg-gray-50">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-4">
+        <h2 class="text-3xl font-bold text-center mb-4 text-primary">
           Tại Sao Chọn FlipShip Cho Chở Hàng Bằng Xe Khách?
         </h2>
         <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-          Khám phá sự khác biệt với giải pháp chở hàng bằng xe khách linh hoạt,
-          tiết kiệm và hiệu quả, được thiết kế để đáp ứng nhu cầu vận chuyển của
-          bạn.
+          Khám phá giải pháp vận chuyển linh hoạt, tiết kiệm và hiệu quả, được
+          thiết kế để đáp ứng mọi nhu cầu của bạn.
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div class="bg-white p-6 rounded-lg shadow-md" data-aos="fade-up">
-            <div class="text-primary text-3xl mb-4">
+            <div class="text-secondary text-3xl mb-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-12 w-12"
@@ -73,9 +73,14 @@ import Layout from "../layouts/Layout.astro";
             </div>
             <h3 class="text-xl font-semibold mb-2">Giao Hàng Nhanh Chóng</h3>
             <p class="text-gray-600">
-              Tận dụng mạng lưới xe khách để giao hàng nhanh chóng trên các
-              tuyến đường nội địa.
+              Tận dụng mạng lưới xe khách để giao hàng nhanh trên các tuyến nội
+              địa.
             </p>
+            <img
+              src="https://images.unsplash.com/photo-1696512651954-b88254d9d62c?q=80&w=1000&h=1000&auto=format&fit=crop"
+              alt="Giao hàng nhanh"
+              class="mt-4 rounded-lg"
+            />
           </div>
 
           <div
@@ -102,8 +107,13 @@ import Layout from "../layouts/Layout.astro";
             <h3 class="text-xl font-semibold mb-2">An Toàn Hàng Hóa</h3>
             <p class="text-gray-600">
               Đảm bảo hàng hóa được vận chuyển an toàn với quy trình kiểm soát
-              chặt chẽ trên xe khách.
+              chặt chẽ.
             </p>
+            <img
+              src="https://images.unsplash.com/photo-1668652164517-c760a97e6fc3?q=80&w=1000&h=1000&auto=format&fit=crop"
+              alt="An toàn hàng hóa"
+              class="mt-4 rounded-lg"
+            />
           </div>
 
           <div
@@ -111,7 +121,7 @@ import Layout from "../layouts/Layout.astro";
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <div class="text-primary text-3xl mb-4">
+            <div class="text-secondary text-3xl mb-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-12 w-12"
@@ -130,8 +140,13 @@ import Layout from "../layouts/Layout.astro";
             <h3 class="text-xl font-semibold mb-2">Tiết Kiệm Chi Phí</h3>
             <p class="text-gray-600">
               Giảm chi phí vận chuyển nhờ tận dụng không gian trống trên xe
-              khách thay vì các phương tiện chuyên dụng.
+              khách.
             </p>
+            <img
+              src="https://images.unsplash.com/photo-1633158829585-23ba8f7c8caf?q=80&w=1000&h=1000&auto=format&fit=crop"
+              alt="Tiết kiệm chi phí"
+              class="mt-4 rounded-lg"
+            />
           </div>
 
           <div
@@ -157,9 +172,14 @@ import Layout from "../layouts/Layout.astro";
             </div>
             <h3 class="text-xl font-semibold mb-2">Theo Dõi Linh Hoạt</h3>
             <p class="text-gray-600">
-              Theo dõi hành trình hàng hóa thời gian thực nhờ hệ thống quản lý
-              thông minh tích hợp trên xe khách.
+              Theo dõi hành trình hàng hóa thời gian thực với hệ thống quản lý
+              thông minh.
             </p>
+            <img
+              src="https://images.unsplash.com/photo-1509576931792-214960705f8a?q=80&w=1000&h=1000&auto=format&fit=crop"
+              alt="Theo dõi linh hoạt"
+              class="mt-4 rounded-lg"
+            />
           </div>
         </div>
       </div>
@@ -168,7 +188,7 @@ import Layout from "../layouts/Layout.astro";
     <!-- Services Section -->
     <section class="py-16 bg-white">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-4">
+        <h2 class="text-3xl font-bold text-center mb-4 text-secondary">
           Dịch Vụ Chở Hàng Bằng Xe Khách Của Chúng Tôi
         </h2>
         <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
@@ -182,6 +202,11 @@ import Layout from "../layouts/Layout.astro";
             data-aos="fade-up"
             data-aos-delay="100"
           >
+            <img
+              src="https://images.unsplash.com/photo-1598317940377-d1e5402f1bed?q=80&w=2070&h=1350&auto=format&fit=crop"
+              alt="Chở hàng nhanh nội địa"
+              class="mb-4 rounded-lg"
+            />
             <div class="text-primary text-4xl mb-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -200,8 +225,8 @@ import Layout from "../layouts/Layout.astro";
             </div>
             <h3 class="text-xl font-semibold mb-4">Chở Hàng Nhanh Nội Địa</h3>
             <p class="text-gray-600 mb-4">
-              Dịch vụ chở hàng nhanh bằng xe khách trên các tuyến đường nội địa,
-              đảm bảo thời gian giao hàng tối ưu.
+              Dịch vụ giao hàng nhanh bằng xe khách trên các tuyến nội địa, đảm
+              bảo thời gian tối ưu.
             </p>
             <ul class="text-gray-600 space-y-2">
               <li>• Giao Hàng Trong Ngày</li>
@@ -216,7 +241,12 @@ import Layout from "../layouts/Layout.astro";
             data-aos="fade-up"
             data-aos-delay="200"
           >
-            <div class="text-primary text-4xl mb-4">
+            <img
+              src="https://images.unsplash.com/photo-1629056706929-5fcc3c0b3b7a?q=80&w=2070&h=1350&auto=format&fit=crop"
+              alt="Chở hàng ghép"
+              class="mb-4 rounded-lg"
+            />
+            <div class="text-secondary text-4xl mb-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 class="h-12 w-12"
@@ -234,8 +264,8 @@ import Layout from "../layouts/Layout.astro";
             </div>
             <h3 class="text-xl font-semibold mb-4">Chở Hàng Ghép</h3>
             <p class="text-gray-600 mb-4">
-              Giải pháp chở hàng ghép bằng xe khách, tiết kiệm chi phí cho các
-              lô hàng nhỏ lẻ.
+              Giải pháp tiết kiệm chi phí cho các lô hàng nhỏ lẻ bằng cách ghép
+              hàng trên xe khách.
             </p>
             <ul class="text-gray-600 space-y-2">
               <li>• Ghép Hàng Linh Hoạt</li>
@@ -250,6 +280,11 @@ import Layout from "../layouts/Layout.astro";
             data-aos="fade-up"
             data-aos-delay="300"
           >
+            <img
+              src="https://images.unsplash.com/photo-1731617883960-a4b0b74c067e?q=80&w=2070&h=1350&auto=format&fit=crop"
+              alt="Chở hàng đặc biệt"
+              class="mb-4 rounded-lg"
+            />
             <div class="text-primary text-4xl mb-4">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -267,8 +302,8 @@ import Layout from "../layouts/Layout.astro";
             </div>
             <h3 class="text-xl font-semibold mb-4">Chở Hàng Đặc Biệt</h3>
             <p class="text-gray-600 mb-4">
-              Dịch vụ vận chuyển hàng hóa đặc biệt bằng xe khách với sự hỗ trợ
-              chuyên biệt và an toàn cao.
+              Dịch vụ vận chuyển hàng hóa đặc biệt với sự hỗ trợ chuyên biệt và
+              an toàn cao.
             </p>
             <ul class="text-gray-600 space-y-2">
               <li>• Hàng Dễ Hỏng</li>
@@ -282,24 +317,26 @@ import Layout from "../layouts/Layout.astro";
     </section>
 
     <!-- Stats Section -->
-    <section class="py-16 bg-gray-900 text-white">
+    <section
+      class="py-16 bg-gradient-to-r from-primary to-secondary text-white"
+    >
       <div class="container mx-auto px-4">
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
           <div data-aos="fade-up">
             <div class="text-4xl font-bold mb-2" data-count="500">0+</div>
-            <div class="text-gray-400">Khách Hàng Tin Dùng</div>
+            <div class="text-gray-200">Khách Hàng Tin Dùng</div>
           </div>
           <div data-aos="fade-up" data-aos-delay="100">
             <div class="text-4xl font-bold mb-2" data-count="100">0+</div>
-            <div class="text-gray-400">Tuyến Đường Phục Vụ</div>
+            <div class="text-gray-200">Tuyến Đường Phục Vụ</div>
           </div>
           <div data-aos="fade-up" data-aos-delay="200">
             <div class="text-4xl font-bold mb-2" data-count="98">0%</div>
-            <div class="text-gray-400">Giao Hàng Đúng Hẹn</div>
+            <div class="text-gray-200">Giao Hàng Đúng Hẹn</div>
           </div>
           <div data-aos="fade-up" data-aos-delay="300">
             <div class="text-4xl font-bold mb-2">24/7</div>
-            <div class="text-gray-400">Hỗ Trợ Khách Hàng</div>
+            <div class="text-gray-200">Hỗ Trợ Khách Hàng</div>
           </div>
         </div>
       </div>
@@ -308,12 +345,11 @@ import Layout from "../layouts/Layout.astro";
     <!-- Testimonials Section -->
     <section class="py-16 bg-white">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-4">
+        <h2 class="text-3xl font-bold text-center mb-4 text-primary">
           Khách Hàng Nói Gì Về Dịch Vụ Chở Hàng Bằng Xe Khách
         </h2>
         <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-          Lắng nghe ý kiến từ những khách hàng đã trải nghiệm dịch vụ chở hàng
-          bằng xe khách của FlipShip.
+          Lắng nghe ý kiến từ những khách hàng đã trải nghiệm dịch vụ FlipShip.
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -330,9 +366,14 @@ import Layout from "../layouts/Layout.astro";
               </div>
             </div>
             <p class="text-gray-600">
-              "Dịch vụ chở hàng bằng xe khách của FlipShip giúp tôi tiết kiệm
-              rất nhiều chi phí mà vẫn đảm bảo giao hàng nhanh chóng."
+              "FlipShip giúp tôi tiết kiệm chi phí mà vẫn giao hàng nhanh
+              chóng."
             </p>
+            <img
+              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2070&auto=format&fit=crop"
+              alt="Doanh nghiệp nhỏ"
+              class="mt-4 rounded-lg"
+            />
           </div>
 
           <div
@@ -352,9 +393,13 @@ import Layout from "../layouts/Layout.astro";
               </div>
             </div>
             <p class="text-gray-600">
-              "Tôi rất ấn tượng với sự linh hoạt và khả năng theo dõi hàng hóa
-              của FlipShip. Hàng luôn đến tay khách đúng giờ."
+              "Tôi rất ấn tượng với sự linh hoạt và khả năng theo dõi hàng hóa."
             </p>
+            <img
+              src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?q=80&w=2070&auto=format&fit=crop"
+              alt="Quản lý kinh doanh"
+              class="mt-4 rounded-lg"
+            />
           </div>
 
           <div
@@ -374,16 +419,20 @@ import Layout from "../layouts/Layout.astro";
               </div>
             </div>
             <p class="text-gray-600">
-              "Nhờ FlipShip, tôi có thể gửi hàng hóa đặc biệt một cách an toàn
-              và tiết kiệm hơn so với các dịch vụ khác."
+              "Gửi hàng hóa đặc biệt an toàn và tiết kiệm hơn với FlipShip."
             </p>
+            <img
+              src="https://images.unsplash.com/photo-1556740749-887f6717d7e4?q=80&w=2070&auto=format&fit=crop"
+              alt="Cửa hàng online"
+              class="mt-4 rounded-lg"
+            />
           </div>
         </div>
       </div>
     </section>
 
     <!-- CTA Section -->
-    <section class="py-16 bg-gradient-to-r from-blue-600 to-blue-800">
+    <section class="py-16 bg-gradient-to-r from-secondary to-primary">
       <div
         class="container mx-auto px-4 text-center max-w-[90%] md:max-w-[60%]"
       >
@@ -392,20 +441,20 @@ import Layout from "../layouts/Layout.astro";
         </h2>
         <p class="text-xl text-white mb-8">
           Hãy để FlipShip giúp bạn vận chuyển hàng hóa bằng xe khách một cách
-          hiệu quả và tiết kiệm nhất
+          hiệu quả và tiết kiệm nhất.
         </p>
         <div
           class="flex flex-col space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 justify-center"
         >
           <a
             href="/contact"
-            class="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition inline-block"
+            class="bg-white text-secondary px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition inline-block"
           >
             Bắt Đầu Ngay
           </a>
           <a
             href="/services"
-            class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition inline-block"
+            class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition inline-block"
           >
             Tìm Hiểu Thêm
           </a>
@@ -416,40 +465,40 @@ import Layout from "../layouts/Layout.astro";
     <!-- Partners Section -->
     <section class="py-16 bg-gray-50">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-4">
+        <h2 class="text-3xl font-bold text-center mb-4 text-secondary">
           Các Đối Tác Hỗ Trợ Dịch Vụ Xe Khách
         </h2>
         <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
           Chúng tôi hợp tác với các nhà xe uy tín để mang đến dịch vụ chở hàng
-          bằng xe khách tốt nhất cho bạn.
+          tốt nhất cho bạn.
         </p>
 
         <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
           <div class="p-4" data-aos="fade-up">
             <img
               src="https://placehold.co/200x80?text=Nhà+Xe+1"
-              alt="Nhà Xe"
+              alt="Nhà Xe 1"
               class="mx-auto"
             />
           </div>
           <div class="p-4" data-aos="fade-up" data-aos-delay="100">
             <img
               src="https://placehold.co/200x80?text=Nhà+Xe+2"
-              alt="Nhà Xe"
+              alt="Nhà Xe 2"
               class="mx-auto"
             />
           </div>
           <div class="p-4" data-aos="fade-up" data-aos-delay="200">
             <img
               src="https://placehold.co/200x80?text=Nhà+Xe+3"
-              alt="Nhà Xe"
+              alt="Nhà Xe 3"
               class="mx-auto"
             />
           </div>
           <div class="p-4" data-aos="fade-up" data-aos-delay="300">
             <img
               src="https://placehold.co/200x80?text=Nhà+Xe+4"
-              alt="Nhà Xe"
+              alt="Nhà Xe 4"
               class="mx-auto"
             />
           </div>
