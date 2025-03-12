@@ -110,6 +110,7 @@ import Layout from "../layouts/Layout.astro";
 
   <script>
     import emailjs from "@emailjs/browser";
+    import Swal from "sweetalert2";
 
     const contactForm = document.getElementById(
       "contact-form"
@@ -155,10 +156,10 @@ import Layout from "../layouts/Layout.astro";
         // Gửi email auto-reply đến người dùng
         const autoReplyData = {
           name: formData.name,
-          email: formData.email, // Để hiển thị trong template nếu cần
+          email: formData.email,
           message: formData.message,
-          to_email: formData.email, // Địa chỉ nhận email auto-reply
-          reply_to: "kevintruong6587@gmail.com", // Khi người dùng reply, gửi về FlipShip
+          to_email: formData.email,
+          reply_to: "kevintruong6587@gmail.com",
         };
         emailjs
           .send(serviceId, autoReplyTemplateId, autoReplyData, publicKey)
@@ -169,12 +170,22 @@ import Layout from "../layouts/Layout.astro";
                 response.status,
                 response.text
               );
-              alert("Cảm ơn bạn đã liên hệ. Chúng tôi sẽ phản hồi sớm!");
+              Swal.fire({
+                icon: "success",
+                title: "Thành công!",
+                text: "Cảm ơn bạn đã liên hệ. Chúng tôi sẽ phản hồi sớm!",
+                confirmButtonText: "OK",
+              });
               contactForm.reset();
             },
             (error) => {
               console.error("Lỗi khi gửi auto-reply:", error);
-              alert("Có lỗi xảy ra khi gửi tin nhắn. Vui lòng thử lại sau!");
+              Swal.fire({
+                icon: "error",
+                title: "Lỗi!",
+                text: "Có lỗi xảy ra khi gửi tin nhắn. Vui lòng thử lại sau!",
+                confirmButtonText: "OK",
+              });
             }
           );
       });
