@@ -1,0 +1,65 @@
+---
+const stats = [
+  { count: 500, suffix: "+", label: "Khách Hàng Tin Dùng" },
+  { count: 100, suffix: "+", label: "Tuyến Đường Phục Vụ" },
+  { count: 98, suffix: "%", label: "Giao Hàng Đúng Hẹn" },
+  { count: null, value: "24/7", label: "Hỗ Trợ Khách Hàng" }
+];
+---
+
+<section class="py-16 bg-secondary text-white">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+      {stats.map((stat, index) => (
+        <div data-aos="fade-up" data-aos-delay={index * 100}>
+          <div
+            class="text-4xl font-bold mb-2"
+            data-count={stat.count}
+            data-suffix={stat.suffix}
+          >
+            {stat.count ? "0" : stat.value}
+          </div>
+          <div class="text-gray-200">{stat.label}</div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const counters = document.querySelectorAll("[data-count]");
+
+      const animateCounter = (counter) => {
+        const target = parseInt(counter.getAttribute("data-count"));
+        const suffix = counter.getAttribute("data-suffix") || ""; // Lấy suffix từ data-suffix
+        let count = 0;
+        const duration = 4000; // 4 giây
+        const increment = target / (duration / 20);
+
+        const updateCount = () => {
+          count += increment;
+          if (count >= target) {
+            counter.textContent = target + suffix;
+          } else {
+            counter.textContent = Math.ceil(count) + suffix;
+            requestAnimationFrame(updateCount);
+          }
+        };
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            if (entries[0].isIntersecting) {
+              requestAnimationFrame(updateCount);
+              observer.disconnect();
+            }
+          },
+          { threshold: 0.5 } // 50% phần tử trong viewport thì chạy
+        );
+
+        observer.observe(counter);
+      };
+
+      counters.forEach(animateCounter);
+    });
+  </script>
+</section>

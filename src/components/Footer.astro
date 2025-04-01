@@ -1,0 +1,72 @@
+---
+const footerLinks = {
+  quickLinks: [
+    { href: "/services", label: "Các dịch vụ" },
+    { href: "/about", label: "Về chúng tôi" },
+    { href: "/contact", label: "Liên hệ" },
+  ],
+  services: [
+    { href: "/services", label: "Vận chuyển cấp tốc" },
+    { href: "/services", label: "Vận chuyển hàng quá khổ" },
+    { href: "/services", label: "Vận chuyển tiêu chuẩn" },
+  ],
+  contact: [
+    "Tòa nhà tài chính Bitexco, Lầu 52, Quận 1, TP. Hồ Chí Minh",
+    "contact@flipship.com",
+    "+84 234 567 890",
+  ],
+};
+---
+
+<footer class="bg-primary text-white py-12">
+  <div class="container mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <h3 class="text-xl font-bold mb-4">FlipShip</h3>
+        <p class="text-gray-200">
+          Tối ưu hóa chuỗi cung ứng, kiến tạo tương lai bền vững
+        </p>
+      </div>
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Liên kết nhanh</h4>
+        <ul class="space-y-2">
+          {
+            footerLinks.quickLinks.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  class="text-gray-200 hover:text-white transition-colors"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Các dịch vụ</h4>
+        <ul class="space-y-2">
+          {
+            footerLinks.services.map((link) => (
+              <li>
+                <a
+                  href={link.href}
+                  class="text-gray-200 hover:text-white transition-colors"
+                >
+                  {link.label}
+                </a>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+      <div>
+        <h4 class="text-lg font-semibold mb-4">Thông tin liên hệ</h4>
+        <ul class="space-y-2 text-gray-200">
+          {footerLinks.contact.map((item) => <li>{item}</li>)}
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>

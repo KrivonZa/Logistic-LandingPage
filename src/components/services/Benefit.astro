@@ -1,0 +1,76 @@
+---
+const benefits = [
+  {
+    icon: `
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+      </svg>
+    `,
+    iconColor: "text-secondary",
+    title: "Tốc Độ",
+    description: "Giao hàng nhanh chóng nhờ mạng lưới xe khách rộng khắp.",
+  },
+  {
+    icon: `
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+      </svg>
+    `,
+    iconColor: "text-primary",
+    title: "An Toàn",
+    description: "Quy trình kiểm soát chặt chẽ đảm bảo hàng hóa nguyên vẹn.",
+  },
+  {
+    icon: `
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+      </svg>
+    `,
+    iconColor: "text-secondary",
+    title: "Tiết Kiệm",
+    description: "Giảm chi phí vận chuyển với không gian xe khách tối ưu.",
+  },
+  {
+    icon: `
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+      </svg>
+    `,
+    iconColor: "text-primary",
+    title: "Linh Hoạt",
+    description:
+      "Theo dõi và quản lý hàng hóa dễ dàng với hệ thống thông minh.",
+  },
+];
+---
+
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-4 text-primary">
+      Lợi Ích Khi Sử Dụng Dịch Vụ
+    </h2>
+    <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+      Dịch vụ của FlipShip không chỉ nhanh mà còn mang lại nhiều giá trị vượt
+      trội cho bạn.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      {
+        benefits.map((benefit, index) => (
+          <div
+            class="text-center"
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
+          >
+            <div
+              class={benefit.iconColor + " text-3xl mb-4"}
+              set:html={benefit.icon}
+            />
+            <h3 class="text-xl font-semibold mb-2">{benefit.title}</h3>
+            <p class="text-gray-600">{benefit.description}</p>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,91 @@
+---
+const team = [
+  {
+    image: "/about/CEO.webp",
+    alt: "Tạ Đào Phương Thảo",
+    name: "Tạ Đào Phương Thảo",
+    role: "Giám Đốc Điều Hành (CEO)",
+    description:
+      "Lãnh đạo chiến lược, tăng trưởng kinh doanh, giám sát tài chính.",
+  },
+  {
+    image: "/about/CFO.webp",
+    alt: "Nguyễn Thành Nhân",
+    name: "Nguyễn Thành Nhân",
+    role: "Giám Đốc Tài Chính (CFO)",
+    description:
+      "Lập kế hoạch tài chính, quản lý ngân sách, điều hành dòng tiền.",
+  },
+  {
+    image: "/about/CMO.webp",
+    alt: "Phạm Nguyễn Trọng Hùng",
+    name: "Phạm Nguyễn Trọng Hùng",
+    role: "Giám Đốc Marketing (CMO)",
+    description:
+      "Phát triển chiến lược marketing, quản lý thương hiệu, nghiên cứu thị trường.",
+  },
+  {
+    image: "/about/COO.webp",
+    alt: "Nguyễn Quang Triết",
+    name: "Nguyễn Quang Triết",
+    role: "Giám Đốc Vận Hành (COO)",
+    description: "Thực thi vận hành, cải thiện quy trình, lãnh đạo đội ngũ.",
+  },
+  {
+    image: "/about/CTO.webp",
+    alt: "Trần Giang Khánh",
+    name: "Trần Giang Khánh",
+    role: "Giám Đốc Công Nghệ (CTO)",
+    description: "Đổi mới công nghệ, quản lý hạ tầng, tối ưu chi phí CNTT.",
+  },
+  {
+    image: "/about/CPO.webp",
+    alt: "Trương Tấn Dũng",
+    name: "Trương Tấn Dũng",
+    role: "Giám Đốc Sản Phẩm (CPO)",
+    description: "Định hướng sản phẩm, thiết kế UI/UX, lãnh đạo phát triển.",
+  },
+];
+---
+
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-4 text-secondary">
+      Đội Ngũ Của Chúng Tôi
+    </h2>
+    <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+      Đội ngũ FlipShip bao gồm những chuyên gia giàu kinh nghiệm trong lĩnh vực
+      logistics và công nghệ, luôn sẵn sàng phục vụ bạn.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {
+        team.map((member, index) => (
+          <div
+            class="bg-gray-50 rounded-lg shadow-md group transition-colors duration-300"
+            data-aos="fade-up"
+            data-aos-delay={index * 100}
+          >
+            <div class="group-hover:bg-primary p-6 rounded-lg transition-colors">
+              <img
+                src={member.image}
+                alt={member.alt}
+                class="w-24 h-24 rounded-full mx-auto mb-4 transition-opacity duration-300 hover:opacity-90"
+                loading="lazy"
+              />
+              <h3 class="text-xl font-semibold text-center mb-2 text-gray-800 transition-colors duration-300 group-hover:text-white">
+                {member.name}
+              </h3>
+              <p class="text-gray-600 text-center transition-colors duration-300 group-hover:text-white">
+                {member.role}
+              </p>
+              <p class="text-gray-600 text-center mt-2 transition-colors duration-300 group-hover:text-white">
+                {member.description}
+              </p>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>

@@ -1,0 +1,112 @@
+---
+const services = [
+  {
+    image: "/services/1.webp",
+    alt: "Chở hàng nhanh nội địa",
+    icon: `
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+      </svg>
+    `,
+    iconColor: "text-primary",
+    title: "Chở Hàng Nhanh Nội Địa",
+    description:
+      "Giao hàng nhanh chóng trên các tuyến nội địa, đảm bảo thời gian tối ưu và dịch vụ linh hoạt.",
+    features: [
+      "Giao Hàng Trong Ngày",
+      "Đặt Chỗ Linh Hoạt",
+      "Giao Hàng Tận Nơi",
+      "Hỗ Trợ Đóng Gói",
+    ],
+    link: "/contact",
+  },
+  {
+    image: "/services/2.webp",
+    alt: "Chở hàng ghép",
+    icon: `
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+      </svg>
+    `,
+    iconColor: "text-secondary",
+    title: "Chở Hàng Ghép",
+    description:
+      "Tiết kiệm chi phí với giải pháp ghép hàng cho các lô nhỏ lẻ, tận dụng không gian xe khách.",
+    features: [
+      "Ghép Hàng Linh Hoạt",
+      "Tối Ưu Không Gian",
+      "Giảm Chi Phí Vận Chuyển",
+      "Theo Dõi Từng Lô Hàng",
+    ],
+    link: "/contact",
+  },
+  {
+    image: "/services/3.webp",
+    alt: "Chở hàng đặc biệt",
+    icon: `
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+      </svg>
+    `,
+    iconColor: "text-primary",
+    title: "Chở Hàng Đặc Biệt",
+    description:
+      "Vận chuyển hàng hóa đặc biệt với sự hỗ trợ chuyên biệt, đảm bảo an toàn tối đa.",
+    features: [
+      "Hàng Dễ Hỏng",
+      "Hàng Giá Trị Cao",
+      "Đóng Gói Chuyên Dụng",
+      "Giám Sát Liên Tục",
+    ],
+    link: "/contact",
+  },
+];
+---
+
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-4 text-secondary">
+      Giải Pháp Vận Chuyển Của Chúng Tôi
+    </h2>
+    <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+      Khám phá các dịch vụ vận chuyển hàng hóa bằng xe khách được thiết kế để
+      tối ưu hóa thời gian, chi phí và sự an toàn.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {
+        services.map((service, index) => (
+          <div
+            class="p-6 bg-gray-50 rounded-lg shadow-md"
+            data-aos="fade-up"
+            data-aos-delay={100 + index * 100}
+          >
+            <img
+              src={service.image}
+              alt={service.alt}
+              class="mb-4 rounded-lg"
+              loading="lazy"
+            />
+            <div
+              class={service.iconColor + " text-4xl mb-4"}
+              set:html={service.icon}
+            />
+            <h3 class="text-xl font-semibold mb-4">{service.title}</h3>
+            <p class="text-gray-600 mb-4">{service.description}</p>
+            <ul class="text-gray-600 space-y-2">
+              {service.features.map((feature) => (
+                <li>• {feature}</li>
+              ))}
+            </ul>
+            <a
+              href={service.link}
+              class="mt-4 inline-block text-primary font-semibold hover:underline"
+            >
+              Tìm Hiểu Thêm
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</section>
