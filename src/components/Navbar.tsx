@@ -6,6 +6,7 @@ const navLinks = [
   { href: "/services", label: "Các dịch vụ" },
   { href: "/about", label: "Về chúng tôi" },
   { href: "/tracking", label: "Theo dõi đơn hàng" },
+  { href: "/download", label: "Tải Ứng Dụng" },
   { href: "/contact", label: "Liên hệ" },
 ];
 
@@ -51,7 +52,7 @@ export default function Navbar() {
   return (
     <motion.nav
       ref={navRef}
-      className="sticky top-0 w-full z-50 transition-all duration-300 bg-primary shadow-md"
+      className="sticky top-0 w-full z-50 transition-all duration-300 bg-primary/95 shadow-md"
       initial={{ y: 0 }}
       animate={{ y: isHidden ? "-100%" : 0 }}
       transition={{ duration: 0.15, ease: "easeInOut" }}
