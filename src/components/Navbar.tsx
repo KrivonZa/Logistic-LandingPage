@@ -81,7 +81,7 @@ export default function Navbar() {
                 className="relative text-white text-sm font-medium uppercase tracking-wide hover:text-secondary transition-colors duration-200 group"
               >
                 {link.label}
-                <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full" />
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all duration-300 group-hover:w-full" />
               </a>
             ))}
           </div>
