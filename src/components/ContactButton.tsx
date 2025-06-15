@@ -10,7 +10,7 @@ export default function SocialButtons() {
     >
       {/* Messenger Button */}
       <a
-        href="https://m.me/PAGE_ID"
+        href="https://m.me/61576657470646"
         target="_blank"
         rel="noopener noreferrer"
         className="w-14 h-14 bg-primary rounded-full flex items-center justify-center shadow-lg hover:bg-secondary transition-colors"
