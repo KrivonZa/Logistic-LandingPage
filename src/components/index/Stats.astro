@@ -1,27 +1,62 @@
 ---
 const stats = [
-  { count: 500, suffix: "+", label: "Khách Hàng Tin Dùng" },
-  { count: 100, suffix: "+", label: "Tuyến Đường Phục Vụ" },
-  { count: 98, suffix: "%", label: "Giao Hàng Đúng Hẹn" },
-  { count: null, value: "24/7", label: "Hỗ Trợ Khách Hàng" }
+  {
+    count: 500,
+    suffix: "+",
+    label: "Khách Hàng Tin Dùng",
+    description:
+      "Hơn <strong>500+</strong> doanh nghiệp và cá nhân đã tin tưởng gửi gắm hàng hóa cho FlipShip.",
+  },
+  {
+    count: 100,
+    suffix: "+",
+    label: "Tuyến Đường Phục Vụ",
+    description:
+      "Mở rộng không ngừng! Chúng tôi kết nối bạn trên <strong>100+</strong> tuyến đường chính trên khắp cả nước.",
+  },
+  {
+    count: 98,
+    suffix: "%",
+    label: "Giao Hàng Đúng Hẹn",
+    description:
+      "Cam kết đúng giờ! Tỷ lệ giao hàng đúng hẹn ấn tượng <strong>98%</strong> giúp bạn hoàn toàn an tâm.",
+  },
+  {
+    count: null,
+    value: "24/7",
+    label: "Hỗ Trợ Khách Hàng",
+    description:
+      "Luôn đồng hành cùng bạn! Đội ngũ hỗ trợ chuyên nghiệp sẵn sàng phục vụ <strong>24/7</strong>, mọi lúc mọi nơi.",
+  },
 ];
 ---
 
 <section class="py-16 bg-secondary text-white">
   <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-4">
+      FlipShip: Những Con Số Nói Lên Điều Gì?
+    </h2>
+    <p class="text-gray-200 text-center mb-12 max-w-2xl mx-auto">
+      Chúng tôi tự hào về những thành quả đã đạt được, minh chứng cho sự tin cậy
+      và hiệu quả của dịch vụ FlipShip.
+    </p>
+
     <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-      {stats.map((stat, index) => (
-        <div data-aos="fade-up" data-aos-delay={index * 100}>
-          <div
-            class="text-4xl font-bold mb-2"
-            data-count={stat.count}
-            data-suffix={stat.suffix}
-          >
-            {stat.count ? "0" : stat.value}
+      {
+        stats.map((stat, index) => (
+          <div data-aos="fade-up" data-aos-delay={index * 100}>
+            <div
+              class="text-4xl font-bold mb-2"
+              data-count={stat.count}
+              data-suffix={stat.suffix}
+            >
+              {stat.count ? "0" : stat.value}
+            </div>
+            <div class="text-gray-200 text-lg font-semibold">{stat.label}</div>
+            <p class="text-gray-300 text-sm mt-2" set:html={stat.description} />
           </div>
-          <div class="text-gray-200">{stat.label}</div>
-        </div>
-      ))}
+        ))
+      }
     </div>
   </div>
 
@@ -31,10 +66,10 @@ const stats = [
 
       const animateCounter = (counter) => {
         const target = parseInt(counter.getAttribute("data-count"));
-        const suffix = counter.getAttribute("data-suffix") || ""; // Lấy suffix từ data-suffix
+        const suffix = counter.getAttribute("data-suffix") || "";
         let count = 0;
-        const duration = 4000; // 4 giây
-        const increment = target / (duration / 20);
+        const duration = 2000; // Giảm thời gian để animation nhanh hơn
+        const increment = target / (duration / 10); // Cập nhật nhanh hơn
 
         const updateCount = () => {
           count += increment;
@@ -53,7 +88,7 @@ const stats = [
               observer.disconnect();
             }
           },
-          { threshold: 0.5 } // 50% phần tử trong viewport thì chạy
+          { threshold: 0.5 }
         );
 
         observer.observe(counter);

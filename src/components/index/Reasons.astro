@@ -9,9 +9,9 @@ const reasons = [
     iconColor: "text-secondary",
     title: "Giao Hàng Nhanh Chóng",
     description:
-      "Tận dụng mạng lưới xe khách để giao hàng nhanh trên các tuyến nội địa.",
-    image: "/index/2.webp",
-    alt: "Giao hàng nhanh",
+      "Không còn chờ đợi! Tận dụng tối đa mạng lưới xe khách rộng khắp, FlipShip giúp hàng hóa của bạn 'bay' nhanh như chớp đến mọi miền đất nước.",
+    image: "/index/fast-delivery.png",
+    alt: "Giao hàng siêu tốc",
   },
   {
     icon: `
@@ -22,9 +22,9 @@ const reasons = [
     iconColor: "text-primary",
     title: "An Toàn Hàng Hóa",
     description:
-      "Đảm bảo hàng hóa được vận chuyển an toàn với quy trình kiểm soát chặt chẽ.",
-    image: "/index/3.webp",
-    alt: "An toàn hàng hóa",
+      "An tâm tuyệt đối! Mỗi kiện hàng đều được bảo vệ nghiêm ngặt với quy trình kiểm soát chất lượng từ A đến Z, đảm bảo hàng đến tay người nhận nguyên vẹn, như mới.",
+    image: "/index/safe-delivery.png",
+    alt: "An toàn tuyệt đối",
   },
   {
     icon: `
@@ -35,8 +35,8 @@ const reasons = [
     iconColor: "text-secondary",
     title: "Tiết Kiệm Chi Phí",
     description:
-      "Giảm chi phí vận chuyển nhờ tận dụng không gian trống trên xe khách.",
-    image: "/index/4.webp",
+      "Tiết kiệm bất ngờ! Biến không gian 'thừa' trên xe khách thành chi phí vận chuyển siêu hời cho bạn. Gửi nhiều, lợi càng nhiều!",
+    image: "/index/cost-saving.png",
     alt: "Tiết kiệm chi phí",
   },
   {
@@ -48,8 +48,8 @@ const reasons = [
     iconColor: "text-primary",
     title: "Theo Dõi Linh Hoạt",
     description:
-      "Theo dõi hành trình hàng hóa thời gian thực với hệ thống quản lý thông minh.",
-    image: "/index/5.webp",
+      "Theo dõi 'real-time'! Luôn nắm rõ hàng hóa của bạn đang ở đâu, lộ trình thế nào với hệ thống theo dõi thông minh, cập nhật liên tục 24/7. Mọi thứ trong tầm tay bạn!",
+    image: "/index/track-flexibly.png",
     alt: "Theo dõi linh hoạt",
   },
 ];
@@ -58,11 +58,12 @@ const reasons = [
 <section class="py-16 bg-gray-50">
   <div class="container mx-auto px-4">
     <h2 class="text-3xl font-bold text-center mb-4 text-primary">
-      Tại Sao Chọn FlipShip Cho Chở Hàng Bằng Xe Khách?
+      Vì Sao FlipShip Là Lựa Chọn Hoàn Hảo Cho Bạn?
     </h2>
     <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-      Khám phá giải pháp vận chuyển linh hoạt, tiết kiệm và hiệu quả, được thiết
-      kế để đáp ứng mọi nhu cầu của bạn.
+      Hãy cùng khám phá cách <strong>FlipShip</strong> biến việc gửi hàng trở nên
+      <strong>dễ dàng, nhanh chóng</strong> và <strong>cực kỳ hiệu quả</strong>,
+      phù hợp với mọi yêu cầu khắt khe nhất của bạn.
     </p>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -82,7 +83,7 @@ const reasons = [
             <img
               src={reason.image}
               alt={reason.alt}
-              class="mt-4 rounded-lg"
+              class="mt-4 rounded-lg object-cover h-40 w-full"
               loading="lazy"
             />
           </div>

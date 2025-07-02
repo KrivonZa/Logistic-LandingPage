@@ -1,40 +1,42 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import { Reasons, Stats, Testimonials, CTA, Partners } from "../components/index";
+import { Reasons, Stats, Testimonials, CTA } from "../components/index";
 ---
 
-<Layout title="FlipShip - Tối Ưu Hóa Chở Hàng Bằng Xe Khách">
+<Layout title="FlipShip - Vận Chuyển Hàng Hóa Bằng Xe Khách">
   <main>
-    <!-- Hero Section -->
     <section
       class="pt-24 pb-12 md:pt-32 md:pb-24 bg-primary relative overflow-hidden"
     >
       <div
         class="absolute inset-0 bg-cover bg-center z-0"
-        style="background-image: url('/index/1.webp'); opacity: 0.3;"
+        style="background-image: url('/index/hero-bus.png'); opacity: 0.3;"
       >
       </div>
       <div class="container mx-auto px-4 relative z-10">
         <div class="flex flex-col md:flex-row items-center">
           <div class="md:w-1/2 text-white" data-aos="fade-right">
             <h1 class="text-4xl md:text-6xl font-bold mb-6">
-              Giải Pháp Tối Ưu Hóa Chở Hàng Bằng Xe Khách Cùng Flipship
+              FlipShip: Vận Chuyển Hàng Hóa Tiện Lợi Bằng Xe Khách - Nhanh Chóng
+              & An Toàn!
             </h1>
             <p class="text-xl mb-8">
-              Nâng cao hiệu quả vận chuyển hàng hóa với dịch vụ tiên tiến từ
-              FlipShip. Tận dụng không gian xe khách để giao hàng nhanh chóng,
-              tiết kiệm và an toàn.
+              Bạn cần gửi hàng liên tỉnh? <strong>FlipShip</strong> giúp bạn tối
+              ưu từng chuyến đi, biến không gian trống trên xe khách thành giải pháp
+              giao hàng <strong>siêu tốc, siêu tiết kiệm</strong> và <strong
+                >cực kỳ đáng tin cậy</strong
+              >. Đừng bỏ lỡ!
             </p>
             <div class="space-x-4">
               <a
                 href="/contact"
                 class="bg-secondary text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 hover:text-secondary transition"
-                >Bắt Đầu</a
+                >Trải Nghiệm Ngay</a
               >
               <a
                 href="/services"
                 class="border-2 border-white text-white px-6 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary transition"
-                >Tìm Hiểu Thêm</a
+                >Tìm Hiểu Thêm Về Dịch Vụ</a
               >
             </div>
           </div>
@@ -42,15 +44,9 @@ import { Reasons, Stats, Testimonials, CTA, Partners } from "../components/index
       </div>
     </section>
 
-    <!-- Why Choose Us Section -->
     <Reasons />
-    <!-- Stats Section -->
     <Stats />
-    <!-- Testimonials Section -->
     <Testimonials />
-    <!-- CTA Section -->
     <CTA />
-    <!-- Partners Section -->
-    <Partners />
   </main>
 </Layout>

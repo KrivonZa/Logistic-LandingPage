@@ -8,7 +8,7 @@ const benefits = [
     `,
     iconColor: "text-secondary",
     title: "Tốc Độ",
-    description: "Giao hàng nhanh chóng nhờ mạng lưới xe khách rộng khắp.",
+    description: "Hàng hóa 'bay' nhanh như chớp đến mọi nơi nhờ mạng lưới xe khách phủ sóng toàn quốc.",
   },
   {
     icon: `
@@ -18,7 +18,7 @@ const benefits = [
     `,
     iconColor: "text-primary",
     title: "An Toàn",
-    description: "Quy trình kiểm soát chặt chẽ đảm bảo hàng hóa nguyên vẹn.",
+    description: "Mọi kiện hàng đều được bảo vệ nghiêm ngặt, đảm bảo nguyên vẹn từ lúc gửi đến khi nhận.",
   },
   {
     icon: `
@@ -28,7 +28,7 @@ const benefits = [
     `,
     iconColor: "text-secondary",
     title: "Tiết Kiệm",
-    description: "Giảm chi phí vận chuyển với không gian xe khách tối ưu.",
+    description: "Tối ưu chi phí tối đa nhờ tận dụng không gian trống trên xe khách, gửi càng nhiều, lợi càng lớn!",
   },
   {
     icon: `
@@ -39,7 +39,7 @@ const benefits = [
     iconColor: "text-primary",
     title: "Linh Hoạt",
     description:
-      "Theo dõi và quản lý hàng hóa dễ dàng với hệ thống thông minh.",
+      "Theo dõi 'real-time' mọi lúc mọi nơi, quản lý hàng hóa dễ dàng chỉ với vài cú chạm.",
   },
 ];
 ---
@@ -47,18 +47,18 @@ const benefits = [
 <section class="py-16 bg-gray-50">
   <div class="container mx-auto px-4">
     <h2 class="text-3xl font-bold text-center mb-4 text-primary">
-      Lợi Ích Khi Sử Dụng Dịch Vụ
+      Tại Sao Chọn FlipShip? Những Lợi Ích Vượt Trội Dành Cho Bạn!
     </h2>
     <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-      Dịch vụ của FlipShip không chỉ nhanh mà còn mang lại nhiều giá trị vượt
-      trội cho bạn.
+      Chúng tôi không chỉ vận chuyển hàng hóa, mà còn mang đến sự an tâm, hiệu quả
+      và những giá trị thực sự khác biệt cho mọi khách hàng.
     </p>
 
     <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
       {
         benefits.map((benefit, index) => (
           <div
-            class="text-center"
+            class="text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
             data-aos="fade-up"
             data-aos-delay={index * 100}
           >
@@ -66,7 +66,7 @@ const benefits = [
               class={benefit.iconColor + " text-3xl mb-4"}
               set:html={benefit.icon}
             />
-            <h3 class="text-xl font-semibold mb-2">{benefit.title}</h3>
+            <h3 class="text-xl font-semibold mb-2 text-secondary">{benefit.title}</h3>
             <p class="text-gray-600">{benefit.description}</p>
           </div>
         ))

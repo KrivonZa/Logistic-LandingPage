@@ -3,42 +3,41 @@ import Layout from "../layouts/Layout.astro";
 import { Overview, Benefit, CTA } from "../components/services";
 ---
 
-<Layout title="Dịch Vụ FlipShip - Tối Ưu Hóa Chở Hàng Bằng Xe Khách">
+<Layout title="Dịch Vụ FlipShip - Vận Chuyển Hàng Hóa Thông Minh">
   <main>
-    <!-- Hero Section -->
     <section
       class="pt-24 pb-12 md:pt-32 md:pb-24 bg-primary relative overflow-hidden"
     >
       <div
         class="absolute inset-0 bg-cover bg-center z-0"
-        style="background-image: url('/services/1.webp'); opacity: 0.3;"
+        style="background-image: url('/services/hero-services.webp'); opacity: 0.3;"
       >
       </div>
       <div class="container mx-auto px-4 relative z-10">
         <div class="flex flex-col md:flex-row items-center">
-          <div class="md:w-1/2 text-white" data-aos="fade-right">
+          <div class="md:w-full text-white text-center" data-aos="fade-right">
             <h1 class="text-4xl md:text-6xl font-bold mb-6">
-              Các Dịch Vụ Của FlipShip
+              Khám Phá Giải Pháp Vận Chuyển Toàn Diện Cùng FlipShip
             </h1>
-            <p class="text-xl mb-8">
-              Chúng tôi cung cấp các giải pháp vận chuyển hàng hóa bằng xe khách
-              linh hoạt, hiệu quả và tiết kiệm, đáp ứng mọi nhu cầu của bạn.
+            <p class="text-xl mb-8 max-w-3xl mx-auto">
+              Tại <strong>FlipShip</strong>, chúng tôi mang đến những giải pháp
+              vận chuyển hàng hóa bằng xe khách <strong
+                >linh hoạt, siêu tốc và tiết kiệm nhất</strong
+              >, được thiết kế riêng để đáp ứng mọi yêu cầu khắt khe của bạn.
+              Hãy cùng chúng tôi tối ưu hóa mọi chuyến hàng!
             </p>
             <a
               href="/contact"
-              class="bg-white text-secondary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition"
-              >Liên Hệ Ngay</a
+              class="bg-white text-secondary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 hover:text-primary transition"
+              >Nhận Tư Vấn Miễn Phí</a
             >
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Services Overview Section -->
     <Overview />
-    <!-- Benefits Section -->
     <Benefit />
-    <!-- CTA Section (No Background) -->
     <CTA />
   </main>
 </Layout>

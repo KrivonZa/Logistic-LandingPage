@@ -1,7 +1,7 @@
 ---
 const services = [
   {
-    image: "/services/1.webp",
+    image: "/services/dich-vu-nhanh.webp", // Cập nhật ảnh minh họa cụ thể hơn
     alt: "Chở hàng nhanh nội địa",
     icon: `
       <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -11,7 +11,7 @@ const services = [
     iconColor: "text-primary",
     title: "Chở Hàng Nhanh Nội Địa",
     description:
-      "Giao hàng nhanh chóng trên các tuyến nội địa, đảm bảo thời gian tối ưu và dịch vụ linh hoạt.",
+      "Cần hàng đến nơi 'thần tốc'? Dịch vụ chở hàng nhanh nội địa của <strong>FlipShip</strong> sẽ giúp bạn giao hàng trong ngày trên mọi tuyến đường, với thời gian tối ưu và sự linh hoạt vượt trội.",
     features: [
       "Giao Hàng Trong Ngày",
       "Đặt Chỗ Linh Hoạt",
@@ -21,7 +21,7 @@ const services = [
     link: "/contact",
   },
   {
-    image: "/services/2.webp",
+    image: "/services/dich-vu-ghep.webp", // Cập nhật ảnh minh họa cụ thể hơn
     alt: "Chở hàng ghép",
     icon: `
       <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -31,7 +31,7 @@ const services = [
     iconColor: "text-secondary",
     title: "Chở Hàng Ghép",
     description:
-      "Tiết kiệm chi phí với giải pháp ghép hàng cho các lô nhỏ lẻ, tận dụng không gian xe khách.",
+      "Giải pháp 'siêu tiết kiệm' cho mọi lô hàng! <strong>FlipShip</strong> tối ưu hóa từng chuyến xe bằng cách ghép hàng, giúp bạn giảm đáng kể chi phí vận chuyển mà vẫn đảm bảo hiệu quả.",
     features: [
       "Ghép Hàng Linh Hoạt",
       "Tối Ưu Không Gian",
@@ -41,7 +41,7 @@ const services = [
     link: "/contact",
   },
   {
-    image: "/services/3.webp",
+    image: "/services/dich-vu-dac-biet.webp", // Cập nhật ảnh minh họa cụ thể hơn
     alt: "Chở hàng đặc biệt",
     icon: `
       <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -51,7 +51,7 @@ const services = [
     iconColor: "text-primary",
     title: "Chở Hàng Đặc Biệt",
     description:
-      "Vận chuyển hàng hóa đặc biệt với sự hỗ trợ chuyên biệt, đảm bảo an toàn tối đa.",
+      "Hàng hóa 'khó tính' ư? Đừng lo! <strong>FlipShip</strong> có quy trình và đội ngũ chuyên biệt để vận chuyển an toàn tuyệt đối các loại hàng đặc biệt, từ dễ vỡ đến giá trị cao, với sự giám sát liên tục <strong>24/7</strong>.",
     features: [
       "Hàng Dễ Hỏng",
       "Hàng Giá Trị Cao",
@@ -66,41 +66,64 @@ const services = [
 <section class="py-16 bg-white">
   <div class="container mx-auto px-4">
     <h2 class="text-3xl font-bold text-center mb-4 text-secondary">
-      Giải Pháp Vận Chuyển Của Chúng Tôi
+      Các Dịch Vụ Vận Chuyển Hàng Hóa Thông Minh Từ FlipShip
     </h2>
     <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-      Khám phá các dịch vụ vận chuyển hàng hóa bằng xe khách được thiết kế để
-      tối ưu hóa thời gian, chi phí và sự an toàn.
+      Dù bạn cần gửi hàng <strong>siêu tốc</strong>, <strong
+        >ghép chuyến tiết kiệm</strong
+      >, hay vận chuyển hàng hóa <strong>đặc biệt</strong>, <strong
+        >FlipShip</strong
+      > đều có giải pháp tối ưu, giúp bạn tiết kiệm thời gian, chi phí và an tâm
+      tuyệt đối.
     </p>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {
         services.map((service, index) => (
           <div
-            class="p-6 bg-gray-50 rounded-lg shadow-md"
+            class="p-6 bg-gray-50 rounded-lg shadow-md flex flex-col items-start hover:shadow-lg transition-shadow duration-300"
             data-aos="fade-up"
             data-aos-delay={100 + index * 100}
           >
             <img
               src={service.image}
               alt={service.alt}
-              class="mb-4 rounded-lg"
+              class="mb-4 rounded-lg w-full h-48 object-cover"
               loading="lazy"
             />
             <div
               class={service.iconColor + " text-4xl mb-4"}
               set:html={service.icon}
             />
-            <h3 class="text-xl font-semibold mb-4">{service.title}</h3>
-            <p class="text-gray-600 mb-4">{service.description}</p>
-            <ul class="text-gray-600 space-y-2">
+            <h3 class="text-xl font-semibold mb-4 text-primary">
+              {service.title}
+            </h3>
+            <p
+              class="text-gray-600 mb-4 flex-grow"
+              set:html={service.description}
+            />
+            <ul class="text-gray-700 space-y-2 list-none pl-0 mb-4">
               {service.features.map((feature) => (
-                <li>• {feature}</li>
+                <li class="flex items-center">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 text-secondary mr-2"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                  {feature}
+                </li>
               ))}
             </ul>
             <a
               href={service.link}
-              class="mt-4 inline-block text-primary font-semibold hover:underline"
+              class="mt-auto inline-block bg-primary text-white px-5 py-2 rounded-lg font-semibold hover:bg-secondary transition"
             >
               Tìm Hiểu Thêm
             </a>
