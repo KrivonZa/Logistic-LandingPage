@@ -7,8 +7,9 @@ const coreValues = [
       </svg>
     `,
     iconColor: "text-secondary",
-    title: "Hiệu Quả",
-    description: "Tối ưu hóa từng khâu để mang lại kết quả tốt nhất.",
+    title: "TỐC ĐỘ & HIỆU QUẢ",
+    description:
+      "<strong>FlipShip</strong> cam kết tối ưu hóa từng quy trình, đảm bảo giao hàng nhanh chóng và đạt hiệu quả cao nhất trong mọi chuyến đi, giúp bạn tiết kiệm thời gian và chi phí.",
   },
   {
     icon: `
@@ -17,8 +18,9 @@ const coreValues = [
       </svg>
     `,
     iconColor: "text-primary",
-    title: "Đổi Mới",
-    description: "Không ngừng cải tiến để dẫn đầu trong ngành logistics.",
+    title: "ĐỔI MỚI LIÊN TỤC",
+    description:
+      "Chúng tôi không ngừng nghiên cứu và ứng dụng công nghệ mới, sáng tạo các giải pháp logistics tiên tiến để luôn dẫn đầu, mang lại giá trị vượt trội cho khách hàng.",
   },
   {
     icon: `
@@ -27,36 +29,37 @@ const coreValues = [
       </svg>
     `,
     iconColor: "text-secondary",
-    title: "Bền Vững",
+    title: "BỀN VỮNG & TRÁCH NHIỆM",
     description:
-      "Giảm chi phí và tác động môi trường qua tối ưu hóa tài nguyên.",
+      "<strong>FlipShip</strong> hoạt động với trách nhiệm xã hội và môi trường, tối ưu hóa tài nguyên để giảm thiểu tác động, hướng tới một tương lai xanh và bền vững cho ngành vận tải.",
   },
 ];
 ---
 
-<section class="py-16 bg-white">
+<section class="py-16 bg-gray-50">
   <div class="container mx-auto px-4">
     <h2 class="text-3xl font-bold text-center mb-4 text-primary">
-      Giá Trị Cốt Lõi
+      Giá Trị Cốt Lõi: Kim Chỉ Nam Của FlipShip
     </h2>
     <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-      Những giá trị định hình cách chúng tôi hoạt động và phục vụ khách hàng.
+      Những nguyên tắc và giá trị này định hình mọi hoạt động của chúng tôi, từ
+      cách chúng tôi làm việc nội bộ đến cách chúng tôi phục vụ khách hàng.
     </p>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
       {
         coreValues.map((value, index) => (
           <div
-            class="text-center"
+            class="text-center bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between"
             data-aos="fade-up"
             data-aos-delay={index * 100}
           >
             <div
-              class={value.iconColor + " text-4xl mb-4"}
+              class={value.iconColor + " text-5xl mb-4"}
               set:html={value.icon}
             />
-            <h3 class="text-xl font-semibold mb-2">{value.title}</h3>
-            <p class="text-gray-600">{value.description}</p>
+            <h3 class="text-xl font-bold mb-2 text-secondary">{value.title}</h3>
+            <p class="text-gray-600 flex-grow" set:html={value.description} />
           </div>
         ))
       }

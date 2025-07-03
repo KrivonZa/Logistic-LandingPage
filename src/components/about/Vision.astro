@@ -7,9 +7,9 @@ const missionVision = [
       </svg>
     `,
     iconColor: "text-secondary",
-    title: "Sứ Mệnh",
+    title: "Sứ Mệnh Của Chúng Tôi",
     description:
-      "Cung cấp dịch vụ vận chuyển hàng hóa nhanh chóng, an toàn và tiết kiệm bằng cách tận dụng không gian xe khách, đáp ứng nhu cầu đa dạng của khách hàng.",
+      "<strong>FlipShip</strong> ra đời với sứ mệnh <strong>tối ưu hóa</strong> quy trình vận chuyển hàng hóa, biến không gian xe khách thành giải pháp logistics <strong>thông minh, hiệu quả và bền vững</strong>. Chúng tôi cam kết mang đến dịch vụ nhanh chóng, an toàn và tiết kiệm nhất, đáp ứng mọi nhu cầu đa dạng của khách hàng và góp phần phát triển kinh tế địa phương.",
   },
   {
     icon: `
@@ -19,9 +19,9 @@ const missionVision = [
       </svg>
     `,
     iconColor: "text-primary",
-    title: "Tầm Nhìn",
+    title: "Tầm Nhìn Của Chúng Tôi",
     description:
-      "Trở thành nền tảng vận chuyển hàng hóa bằng xe khách hàng đầu, thúc đẩy sự phát triển bền vững và tối ưu hóa logistics tại Việt Nam.",
+      "Trở thành <strong>nền tảng vận chuyển hàng hóa bằng xe khách số 1 tại Việt Nam</strong>, được tin cậy bởi hàng triệu doanh nghiệp và cá nhân. <strong>FlipShip</strong> hướng tới việc xây dựng một hệ sinh thái logistics <strong>tiên tiến, minh bạch và thân thiện với môi trường</strong>, thúc đẩy sự phát triển bền vững cho toàn ngành.",
   },
 ];
 ---
@@ -29,27 +29,29 @@ const missionVision = [
 <section class="py-16 bg-gray-50">
   <div class="container mx-auto px-4">
     <h2 class="text-3xl font-bold text-center mb-4 text-primary">
-      Sứ Mệnh & Tầm Nhìn
+      Sứ Mệnh & Tầm Nhìn Kiên Định
     </h2>
     <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-      Chúng tôi hướng tới việc thay đổi cách vận chuyển hàng hóa, tận dụng tối
-      đa nguồn lực hiện có để tạo ra giá trị bền vững.
+      Chúng tôi không ngừng nỗ lực để kiến tạo một tương lai logistics hiệu quả,
+      bền vững và mang lại giá trị thực cho cộng đồng.
     </p>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       {
         missionVision.map((item, index) => (
           <div
-            class="bg-white p-6 rounded-lg shadow-md"
+            class="bg-white p-6 rounded-lg shadow-md flex flex-col items-center text-center hover:shadow-lg transition-shadow duration-300"
             data-aos="fade-up"
             data-aos-delay={index * 100}
           >
             <div
-              class={item.iconColor + " text-3xl mb-4"}
+              class={item.iconColor + " text-5xl mb-4"}
               set:html={item.icon}
             />
-            <h3 class="text-xl font-semibold mb-2">{item.title}</h3>
-            <p class="text-gray-600">{item.description}</p>
+            <h3 class="text-xl font-semibold mb-2 text-secondary">
+              {item.title}
+            </h3>
+            <p class="text-gray-600 flex-grow" set:html={item.description} />
           </div>
         ))
       }

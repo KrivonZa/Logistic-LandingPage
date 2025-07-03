@@ -3,41 +3,43 @@ import Layout from "../layouts/Layout.astro";
 import { Vision, OurTeam, CoreValue } from "../components/about";
 ---
 
-<Layout title="Giới Thiệu Về FlipShip - Tối Ưu Hóa Chở Hàng Bằng Xe Khách">
+<Layout title="Giới Thiệu Về FlipShip - Đối Tác Vận Chuyển Đáng Tin Cậy">
   <main>
-    <!-- Hero Section -->
     <section
       class="pt-24 pb-12 md:pt-32 md:pb-24 bg-primary relative overflow-hidden"
     >
       <div
         class="absolute inset-0 bg-cover bg-center z-0"
-        style="background-image: url('/about/1.webp'); opacity: 0.3;"
+        style="background-image: url('/about/hero-about.png'); opacity: 0.3;"
       >
       </div>
       <div class="container mx-auto px-4 relative z-10">
-        <div class="flex flex-col md:flex-row items-center">
-          <div class="md:w-1/2 text-white" data-aos="fade-right">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6">Về FlipShip</h1>
-            <p class="text-xl mb-8">
-              Chúng tôi là giải pháp tiên phong trong việc tối ưu hóa vận chuyển
-              hàng hóa bằng xe khách, mang đến sự nhanh chóng, tiết kiệm và bền
-              vững cho khách hàng.
+        <div
+          class="flex flex-col md:flex-row items-center text-white text-center md:text-left"
+        >
+          <div class="md:w-full" data-aos="fade-right">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">
+              Hành Trình FlipShip: Kiến Tạo Tương Lai Logistics
+            </h1>
+            <p class="text-xl mb-8 max-w-3xl mx-auto md:mx-0">
+              Tại <strong>FlipShip</strong>, chúng tôi tự hào là đơn vị tiên
+              phong kiến tạo giải pháp vận chuyển hàng hóa bằng xe khách, mang
+              đến sự <strong>nhanh chóng, tiết kiệm và bền vững</strong>
+              cho mọi doanh nghiệp và cá nhân. Chúng tôi không chỉ vận chuyển hàng,
+              mà còn vận chuyển niềm tin và giá trị.
             </p>
             <a
               href="/contact"
-              class="bg-white text-secondary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition"
-              >Liên Hệ Với Chúng Tôi</a
+              class="bg-white text-secondary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 hover:text-primary transition"
+              >Khám Phá Cùng Chúng Tôi</a
             >
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Mission & Vision Section -->
     <Vision />
-    <!-- Our Team Section -->
     <OurTeam />
-    <!-- Core Values Section -->
     <CoreValue />
   </main>
 </Layout>

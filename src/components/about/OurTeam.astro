@@ -4,35 +4,37 @@ const team = [
     name: "Nguyễn Thành Nhân",
     role: "Giám Đốc Điều Hành (CEO)",
     description:
-      "Lãnh đạo chiến lược, tăng trưởng kinh doanh, giám sát tài chính.",
+      "Tầm nhìn chiến lược, dẫn dắt FlipShip bứt phá, xây dựng đội ngũ vững mạnh.",
   },
   {
     name: "Lê Thuỳ Trang",
     role: "Giám Đốc Tài Chính (CFO)",
     description:
-      "Lập kế hoạch tài chính, quản lý ngân sách, điều hành dòng tiền.",
+      "Quản lý tài chính chặt chẽ, tối ưu nguồn lực, đảm bảo sự phát triển bền vững.",
   },
   {
     name: "Phạm Nguyễn Trọng Hùng",
     role: "Giám Đốc Marketing (CMO)",
     description:
-      "Phát triển chiến lược marketing, quản lý thương hiệu, nghiên cứu thị trường.",
+      "Thổi hồn thương hiệu, kết nối FlipShip với hàng triệu khách hàng tiềm năng.",
   },
   {
     name: "Nguyễn Quang Triết",
     role: "Giám Đốc Vận Hành (COO)",
-    description: "Thực thi vận hành, cải thiện quy trình, lãnh đạo đội ngũ.",
+    description:
+      "Tối ưu hóa mọi quy trình, đảm bảo vận hành trơn tru và hiệu quả nhất.",
   },
   {
-    alt: "Trần Giang Khánh",
     name: "Trần Giang Khánh",
     role: "Giám Đốc Công Nghệ (CTO)",
-    description: "Đổi mới công nghệ, quản lý hạ tầng, tối ưu chi phí CNTT.",
+    description:
+      "Tiên phong đổi mới công nghệ, xây dựng nền tảng số mạnh mẽ cho FlipShip.",
   },
   {
     name: "Trương Tấn Dũng",
     role: "Giám Đốc Sản Phẩm (CPO)",
-    description: "Định hướng sản phẩm, thiết kế UI/UX, lãnh đạo phát triển.",
+    description:
+      "Định hướng sản phẩm, kiến tạo trải nghiệm người dùng vượt trội.",
   },
 ];
 ---
@@ -40,32 +42,31 @@ const team = [
 <section class="py-16 bg-white">
   <div class="container mx-auto px-4">
     <h2 class="text-3xl font-bold text-center mb-4 text-secondary">
-      Đội Ngũ Của Chúng Tôi
+      Gặp Gỡ Đội Ngũ Tiên Phong Của Chúng Tôi
     </h2>
     <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-      Đội ngũ FlipShip bao gồm những chuyên gia giàu kinh nghiệm trong lĩnh vực
-      logistics và công nghệ, luôn sẵn sàng phục vụ bạn.
+      Đội ngũ <strong>FlipShip</strong> bao gồm những chuyên gia hàng đầu, tận tâm
+      và giàu kinh nghiệm trong lĩnh vực logistics và công nghệ. Cùng nhau, chúng
+      tôi kiến tạo giải pháp vận chuyển thông minh, vì sự thành công của bạn.
     </p>
 
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+    <div
+      class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-8"
+    >
       {
         team.map((member, index) => (
           <div
-            class="bg-gray-50 rounded-lg shadow-md group transition-colors duration-300"
+            class="bg-gray-50 rounded-lg shadow-md p-6 text-center flex flex-col items-center group transition-transform duration-300 hover:scale-105 hover:shadow-lg"
             data-aos="fade-up"
             data-aos-delay={index * 100}
           >
-            <div class="group-hover:bg-primary p-6 rounded-lg transition-colors">
-              <h3 class="text-xl font-semibold text-center mb-2 text-gray-800 transition-colors duration-300 group-hover:text-white">
-                {member.name}
-              </h3>
-              <p class="text-gray-600 text-center transition-colors duration-300 group-hover:text-white">
-                {member.role}
-              </p>
-              <p class="text-gray-600 text-center mt-2 transition-colors duration-300 group-hover:text-white">
-                {member.description}
-              </p>
-            </div>
+            <h3 class="text-xl font-semibold mb-1 text-gray-800 group-hover:text-primary transition-colors duration-300">
+              {member.name}
+            </h3>
+            <p class="text-secondary text-base font-medium mb-2 group-hover:text-primary transition-colors duration-300">
+              {member.role}
+            </p>
+            <p class="text-gray-600 text-sm flex-grow">{member.description}</p>
           </div>
         ))
       }

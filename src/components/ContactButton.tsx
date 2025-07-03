@@ -10,7 +10,7 @@ export default function SocialButtons() {
     >
       {/* Messenger Button */}
       <a
-        href="https://m.me/61576657470646"
+        href="https://m.me/640212089178855"
         target="_blank"
         rel="noopener noreferrer"
         className="w-14 h-14 bg-primary rounded-full flex items-center justify-center shadow-lg hover:bg-secondary transition-colors"
@@ -27,7 +27,7 @@ export default function SocialButtons() {
       </a>
 
       {/* Zalo Button */}
-      <a
+      {/* <a
         href="https://zalo.me/PHONE_NUMBER"
         target="_blank"
         rel="noopener noreferrer"
@@ -61,7 +61,7 @@ export default function SocialButtons() {
             d="M21.25,18h-8v1.5h5.321L13,26h0.026c-0.163,0.211-0.276,0.463-0.276,0.75V27h7.5 c0.276,0,0.5-0.224,0.5-0.5v-1h-5.321L21,19h-0.026c0.163-0.211,0.276-0.463,0.276-0.75V18z"
           />
         </svg>
-      </a>
+      </a> */}
     </motion.div>
   );
 }
