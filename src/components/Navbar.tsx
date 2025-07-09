@@ -5,7 +5,6 @@ const navLinks = [
   { href: "/", label: "Trang chủ" },
   { href: "/services", label: "Các dịch vụ" },
   { href: "/about", label: "Về chúng tôi" },
-  { href: "/tracking", label: "Theo dõi đơn hàng" },
   { href: "/download", label: "Tải Ứng Dụng" },
   { href: "/contact", label: "Liên hệ" },
 ];
